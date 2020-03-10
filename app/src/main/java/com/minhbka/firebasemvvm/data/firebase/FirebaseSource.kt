@@ -2,7 +2,7 @@ package com.minhbka.firebasemvvm.data.firebase
 
 import com.google.firebase.auth.FirebaseAuth
 import io.reactivex.Completable
-
+// this class is created to handle Firebase operations some how similar as API
 class FirebaseSource {
     private val firebaseAuth : FirebaseAuth by lazy {
         FirebaseAuth.getInstance()
