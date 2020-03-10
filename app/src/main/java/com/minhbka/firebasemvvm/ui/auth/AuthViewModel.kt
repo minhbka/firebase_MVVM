@@ -74,7 +74,7 @@ class AuthViewModel(
         disposables.add(disposable)
     }
 
-    fun goToSignUp(view: View){
+    fun goToSignup(view: View){
         Intent(view.context, SignupActivity::class.java).also {
             view.context.startActivity(it)
         }

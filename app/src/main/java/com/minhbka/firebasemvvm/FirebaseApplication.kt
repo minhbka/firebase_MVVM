@@ -4,6 +4,7 @@ import android.app.Application
 import com.minhbka.firebasemvvm.data.firebase.FirebaseSource
 import com.minhbka.firebasemvvm.data.repositories.UserRepository
 import com.minhbka.firebasemvvm.ui.auth.AuthViewModelFactory
+import com.minhbka.firebasemvvm.ui.home.HomeViewModelFactory
 import org.kodein.di.Kodein
 import org.kodein.di.KodeinAware
 import org.kodein.di.android.x.androidXModule
@@ -19,5 +20,6 @@ class FirebaseApplication:Application(), KodeinAware {
         bind() from singleton { FirebaseSource() }
         bind() from singleton { UserRepository(instance()) }
         bind() from provider { AuthViewModelFactory(instance()) }
+        bind() from provider { HomeViewModelFactory(instance()) }
     }
 }
